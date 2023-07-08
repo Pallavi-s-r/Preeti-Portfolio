@@ -11,10 +11,7 @@ const Footer = () => {
       <img src={Wave} alt="" style={{ width: "100%" }} />
       <div className="f-content">
         <span>bhardwajpreeti684@gmail.com</span>
-        {/* <div className="f-icons"> */}
-          {/* <Insta color="white" size={"3rem"} />
-          <Facebook color="white" size={"3rem"} />
-          <Gitub color="white" size={"3rem"} /> */}
+
           <div className="f-icons">
           <a href="https://github.com/Preeti684-bhardwaj" target="_blank">
             <img src={Github} alt="GitHub" />

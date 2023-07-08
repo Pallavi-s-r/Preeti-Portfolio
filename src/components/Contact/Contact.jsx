@@ -8,21 +8,24 @@ const Contact = () => {
   const form = useRef();
   const [done, setDone] = useState(false)
 
-    const sendEmail = (e) => {
-      e.preventDefault();
-  
-      emailjs.sendForm('service_gg8b5l5', 'template_u9q3s4i', form.current, 'eWtioIHEPTG4reIfB')
-        .then(
-          (result) => {
-            console.log(result.text);
-            setDone(true);
-            form.current.reset();
-          },
-          (error) => {
-            console.log(error.text);
-          }
-        );
-    };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs.sendForm("service_hvrqi6a","template_s5kscmq", form.current,"U-XE9ScGKQQwUUl9c")
+      .then(
+        (result) => {
+          console.log(result.text);
+          setDone(true);
+          form.reset();
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      )
+      e.target.reset()
+    
+  };
+
   return (
     <div className="contact-form" id="contact">
       {/* left side copy and paste from work section */}
@@ -39,20 +42,35 @@ const Contact = () => {
       </div>
       {/* right side form */}
       <div className="c-right">
-        <form ref={form} onSubmit={sendEmail}>
-          <input type="text" name="user_name" className="user"  placeholder="Name"/>
-          <input type="email" name="user_email" className="user" placeholder="Email"/>
-          <textarea name="message" className="user" placeholder="Message"/>
-          <input type="submit" value="Send" className="button"/>
-          {done && <span>Thanks for contacting me</span>}
-          <div
-            className="blur c-blur1"
-            style={{ background: "var(--purple)" }}
-          ></div>
-        </form>
+      <form ref={form} onSubmit={sendEmail}>
+      <input type="text"  name='name' placeholder='Your Full Name' required/>
+      <input type="email"  name='email' placeholder='Your Email' required/>
+      <textarea name="message" placeholder='your message' rows="7" required></textarea>
+        <button type="submit" className='btn btn-primary'>Send Message</button>
+      <div className="blur c-blur1"
+          style={{ background: "var(--purple)" }}
+     ></div>
+    </form>
+
+        {/* <form ref={form} onSubmit={sendEmail}>
+        {/* <a href='bhardwajpreeti684@gmail.com' target="_blank"  rel="noreferrer">Send a message</a> */}
+          {/* <input type="text" name="user_name" className="user"  placeholder="Name"/> */}
+          {/* <input type="email" name="user_email" className="user" placeholder="Email"/> */}
+          {/* <textarea name="message" className="user" placeholder="Message"/> */}
+          {/* <button type="submit" value="Send" className="button">Message Send</button> */}
+          {/* <span>{done && "Thanks for Contacting me"}</span> */}
+          {/* <div */}
+            {/* className="blur c-blur1" */}
+            {/* style={{ background: "var(--purple)" }} */}
+          {/* ></div> */}
+        {/* </form> */} 
       </div>
     </div>
   );
 };
+
+
+
+
 
 export default Contact;
