@@ -27,11 +27,10 @@ const Intro = () => {
       <div className="i-left">
         <div className="i-name">
           {/* yahan change hy darkmode ka */}
-          <span style={{ color: darkMode ? "white" : "" }}>Hy! I Am</span>
-          <span>Andrew Thomas</span>
+          <span style={{ color: darkMode ? "white" : "" }}>Hii! I Am</span>
+          <span>Preeti Bhardwaj</span>
           <span>
-            Frontend Developer with high level of experience in web designing
-            and development, producting the Quality work
+          Experienced backend developer adapt at building robust systems. Seamlessly integrates Node.js, Express.js, and databases, while leveraging basic React skills to create engaging user experiences. Prioritizes clean code, security, and seamless functionality for exceptional results.
           </span>
         </div>
         <Link to="contact" smooth={true} spy={true}>
@@ -39,9 +38,15 @@ const Intro = () => {
         </Link>
         {/* social icons */}
         <div className="i-icons">
-          <img src={Github} alt="" />
-          <img src={LinkedIn} alt="" />
-          <img src={Instagram} alt="" />
+          <a href="https://github.com/Preeti684-bhardwaj" target="_blank">
+            <img src={Github} alt="GitHub" />
+          </a>
+          <a href="https://www.linkedin.com/in/preeti-bhardwaj-7a1a55249/" target="_blank">
+            <img src={LinkedIn} alt="LinkedIn" />
+          </a>
+          <a href="https://www.instagram.com/preeti_bhardwaj709/" target="_blank">
+            <img src={Instagram} alt="Instagram" />
+          </a>
         </div>
       </div>
       {/* right image side */}
@@ -75,7 +80,7 @@ const Intro = () => {
           className="floating-div"
         >
           {/* floatinDiv mein change hy dark mode ka */}
-          <FloatinDiv img={thumbup} text1="Best Design" text2="Award" />
+          <FloatinDiv img={thumbup} text1="Efficient and Scalable" text2="Projects" />
         </motion.div>
 
         <div className="blur" style={{ background: "rgb(238 210 255)" }}></div>

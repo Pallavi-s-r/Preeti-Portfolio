@@ -7,28 +7,22 @@ const Contact = () => {
   const darkMode = theme.state.darkMode;
   const form = useRef();
   const [done, setDone] = useState(false)
-  const sendEmail = (e) => {
-    e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "service_2mu5xtl",
-        "template_m5udu2c",
-        form.current,
-        "VLwg1ltOWvnCYAiK_"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          setDone(true);
-          form.reset();
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-  };
-
+    const sendEmail = (e) => {
+      e.preventDefault();
+  
+      emailjs.sendForm('service_gg8b5l5', 'template_u9q3s4i', form.current, 'eWtioIHEPTG4reIfB')
+        .then(
+          (result) => {
+            console.log(result.text);
+            setDone(true);
+            form.current.reset();
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
+    };
   return (
     <div className="contact-form" id="contact">
       {/* left side copy and paste from work section */}
@@ -50,7 +44,7 @@ const Contact = () => {
           <input type="email" name="user_email" className="user" placeholder="Email"/>
           <textarea name="message" className="user" placeholder="Message"/>
           <input type="submit" value="Send" className="button"/>
-          <span>{done && "Thanks for Contacting me"}</span>
+          {done && <span>Thanks for contacting me</span>}
           <div
             className="blur c-blur1"
             style={{ background: "var(--purple)" }}

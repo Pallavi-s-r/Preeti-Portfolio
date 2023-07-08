@@ -27,9 +27,7 @@ const Services = () => {
         <span style={{ color: darkMode ? "white" : "" }}>My Awesome</span>
         <span>services</span>
         <spane>
-          Lorem ispum is simpley dummy text of printing of printing Lorem
-          <br />
-          ispum is simpley dummy text of printing
+        I am a versatile backend developer proficient in HTML, CSS, JavaScript,<br/> Node.js, MongoDB, and have a basic understanding of React.<br/>With a strong foundation in web development,<br/> I excel in building efficient and scalable backend systems. <br/>My expertise in these technologies allows me to create dynamic and interactive <br/>web applications with seamless integration between frontend and backend components.
         </spane>
         <a href={Resume} download>
           <button className="button s-button">Download CV</button>
@@ -46,8 +44,8 @@ const Services = () => {
         >
           <Card
             emoji={HeartEmoji}
-            heading={"Design"}
-            detail={"Figma, Sketch, Photoshop, Adobe Illustrator, Adobe xd"}
+            heading={"Frontend"}
+            detail={"Html, Css, JavaScript, React"}
           />
         </motion.div>
         {/* second card */}
@@ -59,7 +57,7 @@ const Services = () => {
           <Card
             emoji={Glasses}
             heading={"Developer"}
-            detail={"Html, Css, JavaScript, React, Nodejs, Express"}
+            detail={" Nodejs, Express,MongoDB"}
           />
         </motion.div>
         {/* 3rd */}
@@ -70,9 +68,9 @@ const Services = () => {
         >
           <Card
             emoji={Humble}
-            heading={"UI/UX"}
+            heading={"Soft Skill"}
             detail={
-              "Lorem ispum dummy text are usually use in section where we need some random text"
+              "Learning new languages , Quick Learner, Communicating with people , Observer "
             }
             color="rgba(252, 166, 31, 0.45)"
           />

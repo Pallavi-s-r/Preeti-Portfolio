@@ -1,20 +1,30 @@
 import React from "react";
 import "./Footer.css";
 import Wave from "../../img/wave.png";
-import Insta from "@iconscout/react-unicons/icons/uil-instagram";
-import Facebook from "@iconscout/react-unicons/icons/uil-facebook";
-import Gitub from "@iconscout/react-unicons/icons/uil-github";
+import Github from "../../img/github.png";
+import LinkedIn from "../../img/linkedin.png";
+import Insta from "../../img/instagram.png";
 
 const Footer = () => {
   return (
     <div className="footer">
       <img src={Wave} alt="" style={{ width: "100%" }} />
       <div className="f-content">
-        <span>Zainkeepscode@gmail.com</span>
-        <div className="f-icons">
-          <Insta color="white" size={"3rem"} />
+        <span>bhardwajpreeti684@gmail.com</span>
+        {/* <div className="f-icons"> */}
+          {/* <Insta color="white" size={"3rem"} />
           <Facebook color="white" size={"3rem"} />
-          <Gitub color="white" size={"3rem"} />
+          <Gitub color="white" size={"3rem"} /> */}
+          <div className="f-icons">
+          <a href="https://github.com/Preeti684-bhardwaj" target="_blank">
+            <img src={Github} alt="GitHub" />
+          </a>
+          <a href="https://www.linkedin.com/in/preeti-bhardwaj-7a1a55249/" target="_blank">
+            <img src={LinkedIn} alt="LinkedIn" />
+          </a>
+          <a href="https://www.instagram.com/preeti_bhardwaj709/" target="_blank">
+            <img src={Insta} alt="Instagram" />
+          </a>
         </div>
       </div>
     </div>

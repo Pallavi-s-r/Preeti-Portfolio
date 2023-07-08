@@ -20,6 +20,17 @@
   display: flex;
   gap: 2rem;
 }
+.f-icons img {
+  width: 30px; /* Adjust the size of the icons as per your requirement */
+  height: 30px;
+  margin-right: 10px; /* Add some spacing between the icons */
+  filter: brightness(0) invert(1);
+}
+
+.f-icons img:hover {
+  filter: brightness(1) invert(0);/* Add a hover effect to the icons */
+}
+
 
 @media screen and (max-width: 480px){
   .f-content{
